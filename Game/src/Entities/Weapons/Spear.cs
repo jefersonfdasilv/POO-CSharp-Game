@@ -1,15 +1,8 @@
 ﻿namespace Game.Entities.Weapons;
 
-public class Spear: IWeapon
+public class Spear: Weapon
 {
-    public Spear(int damage)
+    public Spear(int damage) : base("Spear", damage)
     {
-        this.Damage = damage;
-    }
-
-    public int Damage { get; set; }
-    public string GetName()
-    {
-        return "Spear";
     }
 }

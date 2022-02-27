@@ -1,14 +1,8 @@
 ﻿namespace Game.Entities.Weapons;
 
-public class Bow: IWeapon
+public class Bow: Weapon
 {
-    public Bow(int damage)
+    public Bow(int damage) : base("Bow", damage)
     {
-        Damage = damage;
-    }
-    public int Damage { get; set; }
-    public string GetName()
-    {
-        return "Bow";
     }
 }

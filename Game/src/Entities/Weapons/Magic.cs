@@ -1,14 +1,8 @@
 ﻿namespace Game.Entities.Weapons;
 
-public class Magic: IWeapon
+public class Magic: Weapon
 {
-    public Magic(int damage)
+    public Magic(int damage) : base("Magic", damage)
     {
-        this.Damage = damage;
-    }
-    public int Damage { get; set; }
-    public string GetName()
-    {
-        return "Magic";
     }
 }

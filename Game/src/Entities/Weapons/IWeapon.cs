@@ -3,6 +3,5 @@
 public interface IWeapon
 {
     public int Damage { get; set; }
-
-    public string GetName();
+    public string Name { get; protected set; }
 }
