@@ -40,7 +40,24 @@ public abstract class Hero
 
     public virtual string Attack()
     {
-        return this.Name + "Atacou com a espada";
+        var weapon = DefaultWeapon();
+        return Attack(weapon);
+    }
+
+    public virtual string Attack(IWeapon weapon)
+    {
+        if (this.Weapons.Contains(weapon))
+        {
+            return $"{this.Name} made a {weapon.Name} attack";
+        }
+        
+        return $"{this.Name} can't attack with a {weapon.Name}";
+        
+    }
+
+    public virtual IWeapon DefaultWeapon()
+    {
+        return this.Weapons.First();
     }
 
     public override string ToString()
